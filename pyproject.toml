@@ -1,0 +1,18 @@
+[project]
+name = "codexmcp"
+version = "0.1.0"
+description = "HTTP Basic Auth proxy for exposing the Codex MCP CLI server"
+readme = "README.md"
+authors = [{ name = "OpenAI Codex" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.9",
+]
+
+[project.scripts]
+codex-mcp-http-proxy = "codexmcp.http_proxy:main"
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
